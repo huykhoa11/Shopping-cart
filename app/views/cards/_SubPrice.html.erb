@@ -1,21 +1,17 @@
-<h1 style="color:crimson">My shopping cart</h1>
-<p>Find me in app/views/cards/show.html.erb</p>
-<%= link_to "Home page", root_path %>
-<hr>
+<% @order_items.each do |item| %>
 
-
-
-<%= @order_items.each do |item| %>
-	<h3><%= item.product.title %>&nbsp;&nbsp;<small><%= link_to "remove", item, method: :delete %></small></h3>
-	<h5><%= item.product.price %></h5>
+	<h3 style="color:coral;"><%= item.product.title %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><%= item.product.price %> $</span></h3>
+	<small>Ordered at [<%= item.created_at.strftime("%m/%d/%Y, %H:%M %p") %>]</small>
 
 	<%= form_for item, remote: true do |f| %>
 		<% f.hidden_field :product_id, :value => item.product.id %>
 		<%= f.number_field :quantity, :value => item.quantity.to_i %>
 		<%= f.submit "Update Card" %>
 	<% end %>
-	
+
 	<h2>Subtotal: <%= item.total %>	</h2>
+	<small><%= link_to "remove", item, method: :delete, data: {remote: true}, class: "delete"  %></small>
 	<hr><br>
+
 <% end %>
-<br>
+
