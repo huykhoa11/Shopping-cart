@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 	
 	
  	get 'cards/show'
+ 	post 'order_items/update'
 	resources :products
 	resources :shop, only:[:index, :show]
 	resources :order_items

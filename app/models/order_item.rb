@@ -28,6 +28,6 @@ class OrderItem < ApplicationRecord
     end										# chu con neu dung self.unit_price thi ko thay doi gia tri dc
 
     def set_total
-        self[:total] = total * quantity
+        self[:total] = total  	#total * quantity
     end
 end

@@ -22,7 +22,7 @@
         <td><%= link_to 'Show', shop_path(product) %></td>
         
         <td>
-        	<%= form_for @order_item do |f| %>
+        	<%= form_for @order_item, remote: true do |f| %>
 	        	<%= f.hidden_field :product_id, :value => product.id %>
 	        	<%= f.number_field :quantity, :value => 1, :min => 1 %>
 	        	<%= f.submit "Add to cart" %>	<!-- Bam Add to cart mot phat la tao order_item moi -->
@@ -36,6 +36,10 @@
 
 <br>
 
-<%= link_to "#{current_order.order_items.size} items with a value of #{current_order.subtotal} $",cards_path %>
+<div id="card">
+	<%= render 'cards/card' %>
+</div>
+
+
 <!-- current_order.subtotal -->
 <% link_to 'New Product', new_product_path %>
