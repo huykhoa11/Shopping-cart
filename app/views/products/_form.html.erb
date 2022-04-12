@@ -11,6 +11,14 @@
     </div>
   <% end %>
 
+  <div>
+    <%= form.label :genre %>
+    <%= select_tag("s1",
+        options_for_select(["牛めし", "カレー", "定食"])) %>
+  </div>
+
+
+  <br>
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>

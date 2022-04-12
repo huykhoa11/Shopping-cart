@@ -1,7 +1,9 @@
-<h1 style="color:crimson;">My shopping cart</h1>
+<h1 style="color:crimson;">Your Order</h1>
 <p>Find me in app/views/cards/show.html.erb</p>
-<%= link_to "Back to Home page", root_path %>
-<hr><br>
+<%= link_to "Back to Home page ⇦", root_path, {class: "btn btn-sm btn-outline-info"} %>
+<br><br>
+
+
 <div id="main">
 	<%= render "cards/SubPrice" %>
 </div>

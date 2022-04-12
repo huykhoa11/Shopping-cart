@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ .delete {
+ 	text-decoration: none;
+ 	color: red;
+ 	padding: 5px;
+ 	border-radius: 30%;
+ }
+
+ .delete:hover {
+ 	background-color: crimson;
+ 	color: white;
+ 	transition: 0.2s;
+ }

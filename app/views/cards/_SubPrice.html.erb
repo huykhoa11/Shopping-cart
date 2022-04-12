@@ -1,17 +1,47 @@
-<% @order_items.each do |item| %>
+<h4 style="color: yellowgreen;"><%= "#{current_order.order_items.size} items with a value of #{current_order.subtotal} ￥"%></h4>
+<hr><br>
+<table class="table">
+	
+	  <thead>
+	    <tr>
+	      <th scope="col">Name</th>
+	      <th scope="col">Price</th>
+	      <th scope="col">Quantity</th>
+	      <th scope="col">Total</th>
+	      <th scope="col">Ordered at</th>
+	      
+	      <th scope="col"></th>
 
-	<h3 style="color:coral;"><%= item.product.title %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><%= item.product.price %> $</span></h3>
-	<small>Ordered at [<%= item.created_at.strftime("%m/%d/%Y, %H:%M %p") %>]</small>
+	    </tr>
+	  </thead>
+	  <% @order_items.each do |item| %>
+	  <tbody>
+	    <tr>
+	      <th scope="row" style="color:coral;"><%= item.product.title %></th>
+	      <td><%= item.product.price %>￥</td>
+	      <td>
+	      		<%= form_for item, remote: true do |f| %>
+					<% f.hidden_field :product_id, :value => item.product.id %>
+					<%= f.number_field :quantity, :value => item.quantity.to_i %>
+					<%= f.submit "Update" %>
+				<% end %>
+			</td>
+	      <td><%= item.total %>￥</td>
+	      <td><%= item.created_at.strftime("%m/%d/%Y, %H:%M %p") %></td>
+	      
+	      <td class="remove-tab"><%= link_to "remove", item, method: :delete, data: {remote: true}, class: "delete"%><td>
+	    </tr>
 
-	<%= form_for item, remote: true do |f| %>
-		<% f.hidden_field :product_id, :value => item.product.id %>
-		<%= f.number_field :quantity, :value => item.quantity.to_i %>
-		<%= f.submit "Update Card" %>
-	<% end %>
+	  </tbody>
+  <% end %>
+</table>
+	
 
-	<h2>Subtotal: <%= item.total %>	</h2>
-	<small><%= link_to "remove", item, method: :delete, data: {remote: true}, class: "delete"  %></small>
-	<hr><br>
+		
 
-<% end %>
+	
+
+
+
+
 

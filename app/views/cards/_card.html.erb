@@ -1,1 +1,2 @@
-<%= link_to "#{current_order.order_items.size} items with a value of #{current_order.subtotal} $",cards_path %>
+<%= link_to "My Cart  #{current_order.order_items.size}",cards_path, { class: "btn btn-sm btn-warning"} %>
+
