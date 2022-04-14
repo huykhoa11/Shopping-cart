@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Shopping cart function
 
-Things you may want to cover:
+Ruby version: 2.7.2 <br>
+Ruby On Rails version: 6.1.4.4
 
-* Ruby version
+# Preview
+<h4>Home Page</h4><hr>
 
-* System dependencies
+![image](https://user-images.githubusercontent.com/69473375/163453189-0bcfb57c-84e0-4261-8e89-7aadef51ef17.png)
 
-* Configuration
+<h4>Ordered Cart</h4><hr>
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image](https://user-images.githubusercontent.com/69473375/163455836-b8c2673a-eb52-4196-9e9a-4f9b4419e3e0.png)
