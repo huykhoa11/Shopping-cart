@@ -13,7 +13,7 @@ Ruby On Rails version: 6.1.4.4
 
 <h4>Ordered Cart</h4><hr>
 
-![image](https://user-images.githubusercontent.com/69473375/163555793-af251b87-de37-4b39-90d6-23ef46bcab20.png)
+![image](https://user-images.githubusercontent.com/69473375/163591994-4403d1a2-d8f9-4039-b0a2-d1c0df29c92d.png)
 
 <h4>Admin page</h4>
 
