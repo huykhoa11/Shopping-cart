@@ -1,6 +1,6 @@
 # README
 
-Shopping cart function
+Shopping cart function and CSV export function
 
 Ruby version: 2.7.2 <br>
 Ruby On Rails version: 6.1.4.4
