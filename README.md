@@ -1,7 +1,7 @@
 # README
 
 Shopping cart function and CSV export function.<br>
-Access to Admin page through "/admin". Only Admin can edit and destroy products.
+Access to Admin page through <strong>"/admin"</strong>. Only Admin can edit and destroy products.
 
 Ruby version: 2.7.2 <br>
 Ruby On Rails version: 6.1.4.4
