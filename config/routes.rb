@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 	
-	
+  	get '/admin', to: 'admin#index'
+  	devise_for :users
+  	
  	get 'cards/show'
  	post 'order_items/update'
 	resources :products
