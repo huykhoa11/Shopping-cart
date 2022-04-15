@@ -8,7 +8,7 @@ class OrderItem < ApplicationRecord
 
 
     def self.csv_attributes
-        ["product_id", "unit_price", "quantity", "total", "created_at"]
+        ["product_id", "unit_price", "quantity", "total", "created_at", "updated_at"]
     end
 
     def self.generate_csv

@@ -9,7 +9,7 @@
 	      <th scope="col">Quantity</th>
 	      <th scope="col">Total</th>
 	      <th scope="col">Ordered at</th>
-	      
+	      <th scope="col">Updated at</th>
 	      <th scope="col"></th>
 
 	    </tr>
@@ -28,7 +28,7 @@
 			</td>
 	      <td><%= item.total %>￥</td>
 	      <td><%= item.created_at.strftime("%m/%d/%Y, %H:%M %p") %></td>
-	      
+	      <td><%= item.updated_at.strftime("%m/%d/%Y, %H:%M %p") %></td>
 	      <td class="remove-tab"><%= link_to "remove", item, method: :delete, data: {remote: true}, class: "btn btn-sm btn-outline-danger"%><td>
 	    </tr>
 
