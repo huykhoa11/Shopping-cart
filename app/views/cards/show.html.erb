@@ -1,6 +1,7 @@
 <h1 style="color:crimson;">Your Order</h1>
 <p>Find me in app/views/cards/show.html.erb</p>
-<%= link_to "Back to Home page ⇦", root_path, {class: "btn btn-sm btn-outline-info"} %>
+<%= link_to "Back to Home page ⇦", root_path, {class: "btn btn-sm btn-outline-info"} %><br><br>
+<%= link_to "Export CSV", cards_path(format: :csv), {style: "color:white;", class: "btn btn-sm btn-secondary"} %>
 <br><br>
 
 
