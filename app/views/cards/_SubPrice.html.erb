@@ -23,13 +23,13 @@
 	      		<%= form_for item, remote: true do |f| %>
 					<% f.hidden_field :product_id, :value => item.product.id %>
 					<%= f.number_field :quantity, :value => item.quantity.to_i %>
-					<%= f.submit "Update" %>
+					<%= f.submit "Update", class: "btn btn-sm btn-outline-secondary" %>
 				<% end %>
 			</td>
 	      <td><%= item.total %>￥</td>
 	      <td><%= item.created_at.strftime("%m/%d/%Y, %H:%M %p") %></td>
 	      
-	      <td class="remove-tab"><%= link_to "remove", item, method: :delete, data: {remote: true}, class: "delete"%><td>
+	      <td class="remove-tab"><%= link_to "remove", item, method: :delete, data: {remote: true}, class: "btn btn-sm btn-outline-danger"%><td>
 	    </tr>
 
 	  </tbody>
